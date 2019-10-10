@@ -75,13 +75,15 @@ static const char *kLRUCacheQueue = "come.songzhou.LRUCacheQueue";
 }
 
 - (id)objectForKey:(id)key {
-    SZLRUCacheNode *node = self.dictionary[key];
+    __block SZLRUCacheNode *node = nil;
     
-    if (node == nil) {
-        return nil;
-    }
-    
-    [self moveToHead:node];
+    dispatch_sync(self.queue, ^{
+        node = self.dictionary[key];
+        
+        if (node) {
+            [self moveToHead:node];
+        }
+    });
     
     return node.value;
 }
