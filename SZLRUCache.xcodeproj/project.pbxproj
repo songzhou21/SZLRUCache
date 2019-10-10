@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		582B8FAF234EC6250079BA3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B8FAE234EC6250079BA3F /* main.m */; };
+		582B8FBC234EC67D0079BA3F /* SZLRUCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B8FBB234EC67D0079BA3F /* SZLRUCacheTests.m */; };
+		582B8FC3234EC6E30079BA3F /* SZLRUCacheNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B8FC2234EC6E30079BA3F /* SZLRUCacheNode.m */; };
+		582B8FC6234EC8FB0079BA3F /* SZLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B8FC5234EC8FB0079BA3F /* SZLRUCache.m */; };
+		582B8FC7234ED3390079BA3F /* SZLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B8FC5234EC8FB0079BA3F /* SZLRUCache.m */; };
+		582B8FC8234ED33B0079BA3F /* SZLRUCacheNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B8FC2234EC6E30079BA3F /* SZLRUCacheNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +30,24 @@
 /* Begin PBXFileReference section */
 		582B8FAB234EC6250079BA3F /* SZLRUCache */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SZLRUCache; sourceTree = BUILT_PRODUCTS_DIR; };
 		582B8FAE234EC6250079BA3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		582B8FB9234EC67D0079BA3F /* SZLRUCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZLRUCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		582B8FBB234EC67D0079BA3F /* SZLRUCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZLRUCacheTests.m; sourceTree = "<group>"; };
+		582B8FBD234EC67D0079BA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582B8FC1234EC6E30079BA3F /* SZLRUCacheNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZLRUCacheNode.h; sourceTree = "<group>"; };
+		582B8FC2234EC6E30079BA3F /* SZLRUCacheNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZLRUCacheNode.m; sourceTree = "<group>"; };
+		582B8FC4234EC8FB0079BA3F /* SZLRUCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZLRUCache.h; sourceTree = "<group>"; };
+		582B8FC5234EC8FB0079BA3F /* SZLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZLRUCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		582B8FA8234EC6250079BA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582B8FB6234EC67D0079BA3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				582B8FAD234EC6250079BA3F /* SZLRUCache */,
+				582B8FBA234EC67D0079BA3F /* SZLRUCacheTests */,
 				582B8FAC234EC6250079BA3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				582B8FAB234EC6250079BA3F /* SZLRUCache */,
+				582B8FB9234EC67D0079BA3F /* SZLRUCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +79,21 @@
 			isa = PBXGroup;
 			children = (
 				582B8FAE234EC6250079BA3F /* main.m */,
+				582B8FC1234EC6E30079BA3F /* SZLRUCacheNode.h */,
+				582B8FC2234EC6E30079BA3F /* SZLRUCacheNode.m */,
+				582B8FC4234EC8FB0079BA3F /* SZLRUCache.h */,
+				582B8FC5234EC8FB0079BA3F /* SZLRUCache.m */,
 			);
 			path = SZLRUCache;
+			sourceTree = "<group>";
+		};
+		582B8FBA234EC67D0079BA3F /* SZLRUCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				582B8FBB234EC67D0079BA3F /* SZLRUCacheTests.m */,
+				582B8FBD234EC67D0079BA3F /* Info.plist */,
+			);
+			path = SZLRUCacheTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +116,23 @@
 			productReference = 582B8FAB234EC6250079BA3F /* SZLRUCache */;
 			productType = "com.apple.product-type.tool";
 		};
+		582B8FB8234EC67D0079BA3F /* SZLRUCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582B8FBE234EC67D0079BA3F /* Build configuration list for PBXNativeTarget "SZLRUCacheTests" */;
+			buildPhases = (
+				582B8FB5234EC67D0079BA3F /* Sources */,
+				582B8FB6234EC67D0079BA3F /* Frameworks */,
+				582B8FB7234EC67D0079BA3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SZLRUCacheTests;
+			productName = SZLRUCacheTests;
+			productReference = 582B8FB9234EC67D0079BA3F /* SZLRUCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +143,9 @@
 				ORGANIZATIONNAME = "Song Zhou";
 				TargetAttributes = {
 					582B8FAA234EC6250079BA3F = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					582B8FB8234EC67D0079BA3F = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -110,9 +164,20 @@
 			projectRoot = "";
 			targets = (
 				582B8FAA234EC6250079BA3F /* SZLRUCache */,
+				582B8FB8234EC67D0079BA3F /* SZLRUCacheTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		582B8FB7234EC67D0079BA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		582B8FA7234EC6250079BA3F /* Sources */ = {
@@ -120,6 +185,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				582B8FAF234EC6250079BA3F /* main.m in Sources */,
+				582B8FC3234EC6E30079BA3F /* SZLRUCacheNode.m in Sources */,
+				582B8FC6234EC8FB0079BA3F /* SZLRUCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582B8FB5234EC67D0079BA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582B8FBC234EC67D0079BA3F /* SZLRUCacheTests.m in Sources */,
+				582B8FC7234ED3390079BA3F /* SZLRUCache.m in Sources */,
+				582B8FC8234ED33B0079BA3F /* SZLRUCacheNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +332,40 @@
 			};
 			name = Release;
 		};
+		582B8FBF234EC67D0079BA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2484Z5XMVT;
+				INFOPLIST_FILE = SZLRUCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.songzhou.SZLRUCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		582B8FC0234EC67D0079BA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2484Z5XMVT;
+				INFOPLIST_FILE = SZLRUCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.songzhou.SZLRUCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -272,6 +383,15 @@
 			buildConfigurations = (
 				582B8FB3234EC6250079BA3F /* Debug */,
 				582B8FB4234EC6250079BA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		582B8FBE234EC67D0079BA3F /* Build configuration list for PBXNativeTarget "SZLRUCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582B8FBF234EC67D0079BA3F /* Debug */,
+				582B8FC0234EC67D0079BA3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
