@@ -55,7 +55,7 @@ static const char *kLRUCacheQueue = "come.songzhou.LRUCacheQueue";
 - (void)setObject:(id)object forKey:(id)key {
     NSParameterAssert(object);
     
-    dispatch_barrier_async(self.queue, ^{
+    dispatch_async(self.queue, ^{
         SZLRUCacheNode *node = self.dictionary[key];
         
         if (node == nil) {
