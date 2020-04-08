@@ -51,6 +51,15 @@ static const char *kLRUCacheQueue = "come.songzhou.LRUCacheQueue";
     return [NSString stringWithFormat:@"%@", self.head];
 }
 
+- (NSString *)descriptionSync {
+    __block NSString *desc;
+    dispatch_sync(self.queue, ^{
+        desc = [self description];
+    });
+    
+    return desc;
+}
+
 #pragma mark - set Object / get object
 - (void)setObject:(id)object forKey:(id)key {
     NSParameterAssert(object);

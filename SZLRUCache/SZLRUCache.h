@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setObject:(id)object forKey:(id)key;
 - (id)objectForKey:(id)key;
 
+- (NSString *)descriptionSync;
+
 @end
 
 NS_ASSUME_NONNULL_END
